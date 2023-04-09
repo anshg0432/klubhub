@@ -1,0 +1,103 @@
+{% extends "clubs/navbar.html" %}
+{% load static %}
+{% block content %}
+    
+
+<div class="sub-body">
+     <h1 class="zeel">Zeal club</h1>
+      
+     
+        <div >
+            <img class="mySlides" src="{%static 'speaking.jpg'%}" style="width:100%">
+            <img class="mySlides" src="{%static 'zeal2.jpg'%}" style="width:100%">
+            <img class="mySlides" src="{%static 'zeal3.jpg'%}" style="width:100%">
+        </div>
+     <br> <br> <br> <br> 
+        <div class="club-container">
+            <div class="club-item">
+              <h1>Upcoming Events</h1>
+               
+              {% for event in events %}
+              <div class="box"><h2 class="h22">{{event.content}}</h2></div>
+              {% endfor %}
+             
+
+            </div>
+            <div class="club-item">
+               <h1>Highlights</h1> 
+               
+               {% for highlight in highlights %}
+               <div class="box"><h2 class="h22">{{highlight.content}}</h2></div>
+               {% endfor %}
+             
+            </div>
+        </div>
+    <br><br>
+        {% if club_follow.user != user or club_follow.count == 0 %}
+
+        <form method="POST">
+          {% csrf_token %}
+          <input type="hidden" name="title" value="2">
+            <button class="btn btn-primary" style="border-radius:25px" type="submit"><h3>Join Club</h3></button>
+
+        </form>
+        {% endif %}
+    <br>
+        <footer>
+<!--            <h1>Team:Klubhub<br>-->
+
+            
+              <div class="btn_wrap">
+                <span class = "span">Visit</span>
+                <div class="container">
+                  <a href="https://www.instagram.com/zealnitj/" target="_blank"><i class="fab fa-instagram"></i></a>
+                  <i class="fab fa-twitter"></i>
+                  <i class="fab fa-github"></i>
+                </div>
+              </div>
+
+
+            <!-- <a href="https://www.instagram.com/zealnitj/" target="_blank"><img src="instagram.png" class="insta"> </a></h1> -->
+        </footer>
+
+
+
+<script>
+   var myIndex = 0;
+    carousel();
+            
+     function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+
+
+
+    const boxes=document.querySelectorAll(".box")
+
+    window.addEventListener('scroll',checkBoxes)
+
+    checkBoxes()
+    function checkBoxes(){
+      const triggerBottom=window.innerHeight/5*4
+      boxes.forEach(box => {
+        const boxTop=box.getBoundingClientRect().top
+        if(boxTop<triggerBottom){
+          box.classList.add('show')
+        }
+        else{
+          box.classList.remove('show')
+        }
+      })
+    }
+
+</script>
+</div>
+{% endblock content %}

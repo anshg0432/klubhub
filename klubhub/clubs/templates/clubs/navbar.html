@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackmol</title>
+    
+    <!-- css stylesheet -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">  
+
+    <!-- Custom styles for this template -->
+<link href="{% static 'main.css' %}" rel="stylesheet" type="text/css">
+
+<!-- font awesome -->
+<script src="https://kit.fontawesome.com/fdef93ad62.js" crossorigin="anonymous"></script>
+
+ <!-- bootstrap script -->
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ 
+</head>
+
+<body style="background-color:#1F1D36;" >
+       <!-- navbar -->
+       <nav class="navbar navbar-expand-lg navbar-dark bg-dark " >
+           {% if user.is_authenticated%}
+                 <a class="navbar-brand explore-subhead-2" href="{% url 'clubs-home'%}">KlubHub</a>
+                 {% else%}
+                 <a class="navbar-brand explore-subhead-2" href="{% url 'clubs-start'%}">KlubHub</a>
+                 {% endif %}
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+
+                 {% if user.is_authenticated%}
+                 <a class="nav-link" href="{% url 'clubs-home'%}" >Home <span class="sr-only">(current)</span></a>
+                 {% else%}
+                 <a class="nav-link" href="{% url 'clubs-start'%}" >Home <span class="sr-only">(current)</span></a>
+                 {% endif %}
+
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'clubs-explore' %}">Clubs</a>
+            </li>
+<!--            <li class="nav-item dropdown">-->
+<!--              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--                Dropdown-->
+<!--              </a>-->
+<!--              <div class="dropdown-menu" aria-labelledby="navbarDropdown">-->
+<!--                <a class="dropdown-item" href="#">Action</a>-->
+<!--                <a class="dropdown-item" href="#">Another action</a>-->
+<!--                <div class="dropdown-divider"></div>-->
+<!--                <a class="dropdown-item" href="#">Something else here</a>-->
+<!--              </div>-->
+<!--            </li>-->
+         </ul>
+<!--         <form class="form-inline  search">-->
+<!--            <input class="form" type="search" placeholder="Search" aria-label="Search">-->
+<!--            <button class=" " type="submit">-->
+<!--                <img src="{%static 'search_black_24dp.svg'%}">-->
+<!--            </button>-->
+<!--          </form>-->
+            {% if user.is_authenticated %}
+            <button class="btn btn-primary profile" type="submit">
+                    <a class="btn btn-primary" href="{% url 'profile'%}"><img src="{% static 'account_box_black_24dp.svg' %}"></a>
+                </button>
+              {% endif %}
+
+          <button class="btn btn-primary {% if user.is_authenticated %}login{% else %}Login{%endif%}" type="submit">
+              {% if user.is_authenticated %}
+                    <a class="btn btn-primary" href="{% url 'logout'%}"><img src="{% static 'logout_black_24dp.svg' %}"></a>
+              {% else %}
+                    <a class="btn btn-primary" href="{% url 'login'%}">Login<img src="{% static 'login_black_24dp.svg' %}"></a>
+              {% endif %}
+          </button>
+        </div>
+      </nav>
+      
+      <div class="transition" >
+       
+        {% block content %}
+        {% endblock content %} 
+       
+        </div>
+        <br>
+        <hr>
+        <footer>  
+            <div class="btn_wrap-1">
+              <span class="span-1 textt">Contact Us</span>
+              <div class="container-1">
+                
+                <a href="https://www.linkedin.com/in/parasjaggi/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.linkedin.com/in/ajbatth/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/vanshika-singh21/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/zealnitj/" target="_blank"><i class="fab fa-twitter"></i></a>
+                
+              </div>
+            </div>
+        </footer>
+        
+
+
+</body>
+</html>

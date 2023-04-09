@@ -1,0 +1,75 @@
+ {% extends "clubs/navbar.html"%}
+ {% load static %}
+{% block content %}
+    <div class="cont" >
+        <div class="item">
+            <h1 class="bigheading">Welcome to KlubHub</h1>
+            <h3 class="subhead">A place where you can know anything about clubs of NITJ</h3>
+<!--            <button class="main" ><a href="{% url 'register'%}">Join Us!</a></button>-->
+            <button class="main">
+            <a  style="text-decoration:none; color:red;font-size:22px;" href="{% url 'register'%}">Join Us!</a>
+                </button>
+        </div>
+        <div class="item">
+            <img src="{% static 'c.jpeg'%}" class="slide">
+            <img src="{% static 'd.jpeg'%}" class="slide1">
+            <img src="{% static '4.png'%}" class="slide2">
+            <img src="{% static '5.png'%}" class="slide3">
+            <img src="{% static '6.png'%}" class="slide4">
+        </div>
+    </div>
+
+
+    
+      
+
+
+
+     <!-- Features -->
+
+<section id="features">
+    <div class="container-fluid" >
+       <div class="row">
+
+     <div class="feature-box col-lg-4">
+       <i class=" icon fas fa-check-circle fa-4x"></i>
+       <h3 class="feature-title"  >Easy to use.</h3>
+       <p >So easy to use,like you can find clubs easily.</p>
+     </div>
+
+     <div class=" feature-box col-lg-4 ">
+      <i class="  icon fas fa-bullseye fa-4x"></i>
+      <h3 class="feature-title" >On time events</h3>
+      <p >Get news about events on time.</p>   
+     </div>
+
+     <div class=" feature-box col-lg-4">
+       <i class="  icon fas fa-heart fa-4x"></i> 
+       <h3  class="feature-title">Upskill.</h3>
+       <p >Find the club you love and inspire,and upskill yourself.</p>
+    </div>
+     
+    </div>
+   </div>
+    <br><br>
+</section>
+<hr>
+
+
+<footer class="foot" style="text-align:left;">
+  <h2 style ="color:white;text-align:center">About</h2>
+  <p>Deep dive into ocean of clubs with our website to learn and grow while you enjoy yourself and leave all the hassles to us. </p>
+  <P>-> We belive clubs and communities are the best way to upskill, explore and develop new oppurtunities . However it can be demanding that's where  we come.
+    We aim to demolish existing barriers and make the experience as pleasant and untrubled as possible.
+  </P>
+  <p>-> IF you are a fresher who aims to join value adding clubs or a existing member who wants to ace his performance we've got you covered.</p>
+  <p>->If you are a club official and want smooth operations and aim for increased enagement KlubHub got your back.</p>
+  <p>->With all the clubs at one place you can manage your tasks and level up your efficiency</p>
+  <p>->So put your hands on the steering wheel and we'll be the radar</p>
+  <p> (►__◄)</p>
+</footer>
+
+
+   
+
+{% endblock content %} 

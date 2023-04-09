@@ -1,0 +1,345 @@
+{% extends "clubs/navbar.html" %}
+{% load static %}
+{% block content %}
+    <div class="neww">
+
+        <h3 class="whitecard">Welcome to</h3>
+        <h1 class="whitecard">KlubHub Explore</h1>
+        <br>
+        <div class="contain">
+          <div class="contain-item">
+            <h1 class="explore-subhead">Literature & Personality improvement:</h1>
+          </div>
+          <div class="contain-item">
+            <img class="draw" src="https://media.giphy.com/media/XEs5ZlqqeGlphBFD20/giphy.gif" alt="dream">
+          </div>
+        </div>
+        <div class="explore-literature-container">
+             <div class="explore-literature-item">
+               <img src="{% static 'zeal.jpg' %}" class="myclubimage" alt="zeal" style="width:100%">
+             <h1 class="cardd">Zeal Club</h1>
+<!--              <p><button class="myclubbutton" type="submit">-->
+<!--                   <a  style="text-decoration:none; color:white;font-size:22px;" href="{% url 'clubs-my_clubs'%}">View</a>-->
+<!--               </button></p>-->
+                 <p><form method="get" action="{% url 'clubs-my_clubs'%}">
+                    <button class="myclubbutton" type="submit">View</button>
+                </form></p>
+             </div>
+   
+             <div class="explore-literature-item">
+               <img src="{% static 'wecan.jpg' %}" class="myclubimage" alt="zeal" style="width:100%">
+             <h1 class="cardd">We Can</h1>
+               <p><form method="get" action="{% url 'clubs-my_clubs'%}">
+                    <button class="myclubbutton" type="submit">View</button>
+                </form></p>
+             </div>
+   
+             <div class="explore-literature-item">
+               <img src="{%static 'ladc.jpg'%}" class="myclubimage" alt="zeal" style="width:100%">
+             <h1 class="cardd">LADC</h1>
+               <p><form method="get" action="{% url 'clubs-my_clubs'%}">
+                    <button class="myclubbutton" type="submit">View</button>
+                </form></p>
+             </div>
+             
+             <div class="explore-literature-item-1" style="background-color: #F3F0D7;margin-left:410px">
+               <img src="{%static 'readculture.jpg'%}" class="myclubimage" alt="zeal" style="width:100%">
+             <h1 class="cardd">Read Culture</h1>
+                 <p><form method="get" action="{% url 'clubs-my_clubs'%}">
+                    <button class="myclubbutton" type="submit">View</button>
+                </form></p>
+             </div>
+        </div>
+   
+
+        <div class="contain-1">
+          <div class="contain-item">
+            <h1 class="explore-subhead-1">Sports & Athletics:</h1>
+          </div>
+          <div class="contain-item">
+            <img class="draw" src="https://media.giphy.com/media/2CC3tHAW0t01u50KDv/giphy.gif" alt="dream">
+          </div>
+        </div>
+
+        <div class="explore-Sports-container">
+            
+             <div class="explore-Sports-item">
+               <img src="{% static 'athletics.jpg'%}" class="myclubimage" alt="zeal" style="width:100%">
+             <h1 class="cardd">Athletics NITJ</h1>
+               <p><form method="get" action="{% url 'clubs-my_clubs'%}">
+                    <button class="myclubbutton" type="submit">View</button>
+                </form></p>
+             </div>
+   
+             <div class="explore-Sports-item">
+               <img src="{% static 'basketball.jpg' %}" class="myclubimage" alt="zeal" style="width:100%">
+             <h1 class="cardd">Baketball Club</h1>
+               <p><form method="get" action="{% url 'clubs-my_clubs'%}">
+                    <button class="myclubbutton" type="submit">View</button>
+                </form></p>
+             </div>
+   
+             <div class="explore-Sports-item">
+               <img src="{% static 'cricket.jpg' %}" class="myclubimage" alt="zeal" style="width:100%">
+             <h1 class="cardd">Cricket Club</h1>
+               <p><form method="get" action="{% url 'clubs-my_clubs'%}">
+                    <button class="myclubbutton" type="submit">View</button>
+                </form></p>
+             </div>
+   
+             <div class="explore-Sports-item-1">
+               <img src="{%static 'badminton.jpg' %}" class="myclubimage" alt="zeal" style="width:100%">
+             <h1 class="cardd">Badminton Club</h1>
+               <p><form method="get" action="{% url 'clubs-my_clubs'%}">
+                    <button class="myclubbutton" type="submit">View</button>
+                </form></p>
+             </div>
+   
+             <div class="explore-Sports-item-1">
+               <img src="{%static 'football.jpg'%}" class="myclubimage" alt="zeal" style="width:100%">
+             <h1 class="cardd">Football Club</h1>
+               <p><form method="get" action="{% url 'clubs-my_clubs'%}">
+                    <button class="myclubbutton" type="submit">View</button>
+                </form></p>
+             </div>
+   
+             <div class="explore-Sports-item-1">
+               <img src="{%static 'vollyball.jpg' %}" class="myclubimage" alt="zeal" style="width:100%">
+             <h1 class="cardd">Volleyball Club</h1>
+               <p><form method="get" action="{% url 'clubs-my_clubs'%}">
+                    <button class="myclubbutton" type="submit">View</button>
+                </form></p>
+             </div>
+        </div>
+
+   
+        <div class="contain-1">
+          <div class="contain-item">
+            <h1 class="explore-subhead-1">Dance:</h1>
+          </div>
+          <div class="contain-item">
+            <img class="draw" src="https://media.giphy.com/media/L3j7WjSi4OP9Qxc9KU/giphy.gif" alt="dream">
+          </div>
+        </div>
+        <div class="explore-dance-container">
+             <div class="explore-dance-item">
+               <img src="{%static 'crimialz.jpg'%}" class="myclubimage" alt="zeal" style="width:100%">
+             <h1 class="cardd">Criminalz Club</h1>
+               <p><form method="get" action="{% url 'clubs-my_clubs'%}">
+                    <button class="myclubbutton" type="submit">View</button>
+                </form></p>
+             </div>
+   
+             <div class="explore-dance-item">
+               <img src="{%static 'si_crew.jpg' %}" class="myclubimage" alt="zeal" style="width:100%">
+             <h1 class="cardd">SI Dance Crew</h1>
+               <p><form method="get" action="{% url 'clubs-my_clubs'%}">
+                    <button class="myclubbutton" type="submit">View</button>
+                </form></p>
+             </div>
+   
+             <div class="explore-dance-item">
+               <img src="{%static 'bhangra.jpg'%}" class="myclubimage" alt="zeal" style="width:100%">
+             <h1 class="cardd">Bhangra Club</h1>
+               <p><form method="get" action="{% url 'clubs-my_clubs'%}">
+                    <button class="myclubbutton" type="submit">View</button>
+                </form></p>
+             </div>
+        </div>
+   
+        <div class="contain">
+          <div class="contain-item">
+            <h1 class="explore-subhead">Coding:</h1>
+          </div>
+          <div class="contain-item">
+            <img class="draw" src="https://media.giphy.com/media/VeqZl1PY5VllfV5pvQ/giphy.gif" alt="dream">
+          </div>
+        </div>
+        <div class="explore-coding-container">
+             <div class="explore-coding-item">
+               <img src="{%static 'dsc.jpg' %}" class="myclubimage" alt="zeal" style="width:100%">
+             <h1 class="cardd">DSC Club</h1>
+               <p><form method="get" action="{% url 'clubs-d_clubs' %}">
+                    <button class="myclubbutton" type="submit">View</button>
+                </form></p>
+             </div>
+   
+             <div class="explore-coding-item">
+               <img src="{%static 'codechef.jpg' %}" class="myclubimage" alt="zeal" style="width:100%">
+             <h1 class="cardd">CodeChef Chapter</h1>
+               <p><form method="get" action="{% url 'clubs-my_clubs'%}">
+                    <button class="myclubbutton" type="submit">View</button>
+                </form></p>
+             </div>
+        </div>
+   
+
+        <div class="contain">
+          <div class="contain-item">
+            <h1 class="explore-subhead">Music & theater:</h1>
+          </div>
+          <div class="contain-item" >
+            <img class="draw" src="https://media.giphy.com/media/0DFhQgeLrX0NYPAKbq/giphy.gif" alt="dream">
+          </div>
+        </div>
+        <div class="explore-music-container" style="margin-top:0px">
+             <div class="explore-music-item">
+               <img src="{%static 'octaves.jpg'%}" class="myclubimage" alt="zeal" style="width:100%">
+             <h1 class="cardd">Octaves Club</h1>
+               <p><form method="get" action="{% url 'clubs-my_clubs'%}">
+                    <button class="myclubbutton" type="submit">View</button>
+                </form></p>
+             </div>
+   
+             <div class="explore-music-item">
+               <img src="{%static 'bawre.jpg'%}" class="myclubimage" alt="zeal" style="width:100%">
+             <h1 class="cardd">Bawre</h1>
+               <p><form method="get" action="{% url 'clubs-my_clubs'%}">
+                    <button class="myclubbutton" type="submit">View</button>
+                </form></p>
+             </div>
+   
+             <div class="explore-music-item">
+               <img src="{%static 'movies.jpg'%}" class="myclubimage" alt="zeal" style="width:100%">
+             <h1 class="cardd">Movie Club</h1>
+               <p><form method="get" action="{% url 'clubs-my_clubs'%}">
+                    <button class="myclubbutton" type="submit">View</button>
+                </form></p>
+             </div>
+        </div>
+
+        <div class="contain">
+          <div class="contain-item">
+            <h1 class="explore-subhead">Photography :</h1>
+          </div>
+          <div class="contain-item">
+            <img class="draw" src="https://media.giphy.com/media/sEdwFtt8k8fHp3lw8N/giphy.gif" alt="dream">
+          </div>
+        </div>
+        <div class="explore-photography-container">
+             <div class="explore-photography-item">
+               <img src="{%static 'netra.jpg'%}" class="myclubimage" alt="zeal" style="width:100%">
+             <h1 class="cardd">Netra</h1>
+               <p><form method="get" action="{% url 'clubs-my_clubs'%}">
+                    <button class="myclubbutton" type="submit">View</button>
+                </form></p>
+             </div>
+   
+        </div>
+   
+
+        <div class="contain">
+          <div class="contain-item">
+            <h1 class="explore-subhead">Art & Craft :</h1>
+          </div>
+          <div class="contain-item">
+            <img class="draw" src="https://media.giphy.com/media/kdFCONvcQI9KOXVGxP/giphy.gif" alt="dream">
+          </div>
+        </div>
+        <div class="explore-art-container">
+             <div class="explore-art-item">
+               <img src="{%static 'artisian.jpg'%}" class="myclubimage" alt="zeal" style="width:100%">
+             <h1 class="cardd">Artician</h1>
+               <p><form method="get" action="{% url 'clubs-my_clubs'%}">
+                    <button class="myclubbutton" type="submit">View</button>
+                </form></p>
+             </div>
+   
+        </div>
+   
+        <div class="contain">
+          <div class="contain-item">
+            <h1 class="explore-subhead">Media :</h1>
+          </div>
+          <div class="contain-item">
+            <img class="draw" src="https://media.giphy.com/media/2ioxf5RiZzD7IgTGmx/giphy.gif" alt="dream">
+          </div>
+        </div>
+        <div class="explore-media-container">
+             <div class="explore-media-item">
+               <img src="{%static 'media_cell.jpg'%}" class="myclubimage" alt="zeal" style="width:100%">
+             <h1 class="cardd">Media Cell</h1>
+               <p><form method="get" action="{% url 'clubs-my_clubs'%}">
+                    <button class="myclubbutton" type="submit">View</button>
+                </form></p>
+             </div>
+   
+        </div>
+   
+        <div class="contain">
+          <div class="contain-item">
+            <h1 class="explore-subhead">Robotics :</h1>
+          </div>
+          <div class="contain-item">
+            <img class="draw" src="https://media.giphy.com/media/8JQOSC9rq8StxyzKz6/giphy.gif" alt="dream">
+          </div>
+        </div>
+        <div class="explore-robot-container">
+             <div class="explore-robot-item">
+               <img src="{%static 'robotics.jpg'%}" class="myclubimage" alt="zeal" style="width:100%">
+             <h1 class="cardd">Rtist Tech NITJ</h1>
+               <p><form method="get" action="{% url 'clubs-my_clubs'%}">
+                    <button class="myclubbutton" type="submit">View</button>
+                </form></p>
+             </div>
+   
+        </div>
+   
+        <div class="contain">
+          <div class="contain-item">
+            <h1 class="explore-subhead">Social :</h1>
+          </div>
+          <div class="contain-item">
+            <img class="draw" src="https://media.giphy.com/media/jQ7caSgqWsDzDguzBr/giphy.gif" alt="dream">
+          </div>
+        </div>
+        <div class="explore-social-container">
+             <div class="explore-social-item">
+               <img src="{%static 'prayas.jpg'%}" class="myclubimage" alt="zeal" style="width:100%">
+             <h1 class="cardd" >Prayas</h1>
+               <p><form method="get" action="{% url 'clubs-my_clubs'%}">
+                    <button class="myclubbutton" type="submit">View</button>
+                </form></p>
+             </div>
+   
+        </div>
+        
+
+        <div class="contain">
+          <div class="contain-item">
+            <h1 class="explore-subhead">Enterpreneurship:</h1>
+          </div>
+          <div class="contain-item">
+            <img class="draw" src="https://media.giphy.com/media/mAJ6NpGrCsg7r03Apk/giphy.gif" alt="dream">
+          </div>
+        </div>
+        <div class="explore-enter-container">
+             <div class="explore-enter-item">
+               <img src="{%static 'nitj_logo.png'%}" class="myclubimage" alt="zeal" style="width:100%">
+             <h1 class="cardd">Managerial Society</h1>
+               <p><form method="get" action="{% url 'clubs-my_clubs'%}">
+                    <button class="myclubbutton" type="submit">View</button>
+                </form></p>
+             </div>
+   
+             <div class="explore-enter-item">
+               <img src="{%static 'ecell.jpg'%}" class="myclubimage" alt="zeal" style="width:100%">
+             <h1 class="cardd">E cell</h1>
+               <p><form method="get" action="{% url 'clubs-my_clubs'%}">
+                    <button class="myclubbutton" type="submit">View</button>
+                </form></p>
+             </div>
+   
+             <div class="explore-enter-item">
+               <img src="{%static 'nitj_logo.png'%}" class="myclubimage" alt="zeal" style="width:100%">
+             <h1 class="cardd">Innovation Club</h1>
+               <p><form method="get" action="{% url 'clubs-my_clubs'%}">
+                    <button class="myclubbutton" type="submit">View</button>
+                </form></p>
+             </div>
+        </div>
+   
+
+    </div>
+     
+{% endblock content %}

@@ -1,0 +1,54 @@
+{% extends "clubs/navbar.html"%}
+{% load static %}
+{% block content %}
+
+    <div class="cont">
+        <div class="item">
+            <h1 class="bigheading">Welcome to KlubHub</h1>
+            <h3 class="subhead">A place where you can know anything about clubs of NITJ</h3>
+        </div>
+        <div class="item">
+            <img src="{%static 'c.jpeg'%}" class="slide">
+            <img src="{%static 'd.jpeg'%}" class="slide1">
+            <img src="{%static '4.png'%}" class="slide2">
+            <img src="{%static '5.png'%}" class="slide3">
+            <img src="{%static '6.png'%}" class="slide4">
+        </div>
+    </div>
+
+
+    
+      
+<!-- my clubs -->
+<div class="my_club_class">
+    <br>
+        {% comment %} <h1 class="myhead">My Clubs</h1>
+        {% for club in clubs %}
+    <div class="explore-literature-item-1">
+        
+       <img src="{{club.image.url}}" class="myclubimage" alt="zeal" style="width:100%">
+     <h1 class="cardd" style="color:white">{{club.title}}</h1>
+       <p><form method="get" action="../{{club.contact}}">
+            <button class="myclubbutton-1" type="submit">Contact</button>
+        </form></p>
+     </div>
+        {% endfor %}
+    <br><br>
+</div> {% endcomment %}
+
+    <h2 style="text-align:center">My Club</h2>
+    <div class="explore-coding-container-1">
+       {% for club in clubs %}
+
+        <div class="explore-coding-item-1">
+       <img src="{{club.image.url}}" class="myclubimage" alt="zeal" style="width:100%">
+        <h1 class="cardd">{{club.title}}</h1>
+       <p><form method="get" action="../{{club.contact}}">
+               <button class="myclubbutton-1" type="submit">View</button>
+       </form></p>
+       </div>
+
+       {% endfor %}
+       </div>
+  </div>
+  {% endblock content %}

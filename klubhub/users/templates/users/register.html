@@ -1,0 +1,27 @@
+{% extends "clubs/navbar.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<br> <br> <br>
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Join Today</legend>
+                {{ form|crispy }}
+            </fieldset>
+            <br>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Sign Up</button>
+            </div>
+        </form>
+        <br>
+        <div class="border-top pt-3">
+            <font class="text-muted">
+                Already have An Account? <a class="ml-2" href="{% url 'login'%}">Sign In</a>
+            </font>
+        </div>
+    </div>    
+    <br> <br>    
+{% endblock %}
+
+
