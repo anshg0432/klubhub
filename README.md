@@ -3,7 +3,7 @@
 # Team Klubhub
 ---
 
-##Tech stack used is
+## Tech stack used is
 ---
 -javascript
 -django
